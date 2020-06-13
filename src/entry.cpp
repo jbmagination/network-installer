@@ -141,7 +141,7 @@ uint64_t timeSinceLastPress = 0;
 int newMaxOptionCount = 5;
 
 // domain we will patch to
-char *currentDomain = (char*)"pretendo.cc\x00";
+char *currentDomain = (char*)"pretendo.network\x00";
 
 BOOL exitingToHBL = TRUE;
 
@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 
 	uint8_t* ready = (uint8_t*)OSAllocFromSystem(0x800, 4);
 	int PretendoAlive = -1;
-	DownloadFile(ready, "http://pretendo.cc", &PretendoAlive);
+	DownloadFile(ready, "http://pretendo.network", &PretendoAlive);
 
 	while(WHBProcIsRunning()) {
 			

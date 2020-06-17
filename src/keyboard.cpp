@@ -84,8 +84,8 @@ char * GetKeyboardInput()
 	// Show the keyboard
 	nn::swkbd::AppearArg appearArg;
 	appearArg.keyboardArg.configArg.languageType = nn::swkbd::LanguageType::English;
-	appearArg.inputFormArg.unk_0x0C = (uint32_t)ToUTF16("Enter the domain name.\nString size is limited to 16 characters.");
-	appearArg.inputFormArg.maxTextLength = 16;
+	appearArg.inputFormArg.unk_0x0C = (uint32_t)ToUTF16("Enter the domain name.\nString size is limited to 12 characters.");
+	appearArg.inputFormArg.maxTextLength = 12;
 	if (!nn::swkbd::AppearInputForm(appearArg)) {
 		WHBLogPrintf("nn::swkbd::AppearInputForm failed");
 		WHBProcShutdown();
